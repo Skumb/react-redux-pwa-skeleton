@@ -2,19 +2,19 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { store } from "./store";
-import { Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./css/index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import createHashHistory from "history/createHashHistory";
+// import createHashHistory from "history/createHashHistory";
 
-const hashHistory = createHashHistory({ basename: process.env.PUBLIC_URL });
+// const hashHistory = createHashHistory({ basename: process.env.PUBLIC_URL });
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={hashHistory}>
+    <BrowserRouter>
       <App />
-    </Router>
+    </BrowserRouter>
   </Provider>,
   document.getElementById("root")
 );
